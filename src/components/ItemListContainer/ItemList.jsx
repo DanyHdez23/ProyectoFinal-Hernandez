@@ -1,5 +1,6 @@
 import Item from "./Item";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const categorias = {
   ACCESORIOS: "Accesorios",
@@ -32,6 +33,9 @@ function ItemList({ items }) {
             <h3>{item.nombre}</h3>
             <p>Precio: ${item.precio}</p>
             <p>{item.descripcion}</p>
+            <Link to={`/productos/${item.id}`}>
+              <button className="btn-ver-producto">Ver Producto</button>
+            </Link>
           </div>
         ))}
       </div>
