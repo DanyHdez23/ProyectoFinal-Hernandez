@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { initializeApp } from 'firebase/app'
 import './index.css'
 import App from './App.jsx'
+import { ShoppingCartProvider } from './context/ShoppingCartContext.jsx'
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -22,7 +23,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 createRoot(document.getElementById('root')).render(
+  
   <StrictMode>
     <App />
-  </StrictMode>,
+  </StrictMode>
+  ,
 )
