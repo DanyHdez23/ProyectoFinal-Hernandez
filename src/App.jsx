@@ -9,6 +9,7 @@ import DetalleProducto from './components/ItemListContainer/DetalleProducto';
 import "./components/ItemListContainer/styles.css";
 import { ShoppingCartProvider } from './context/ShoppingCartContext';
 import ShoppingCart from './components/ShoppingCart';
+import Checkout from './components/checkout';
 
 
 
@@ -26,6 +27,7 @@ function App() {
       <Route path='sobre-nosotros' element={<Nosotros />} />
       <Route path='productos/:id' element={<DetalleProducto/>} />
       <Route path='Cart' element={<ShoppingCart/>} />
+      <Route path='checkout' element={<Checkout />} />
       <Route path='*' element={<Error />} />
     </Route>
   </Routes>

@@ -45,6 +45,11 @@ function ItemList({ items }) {
                   <div className="item-quantity">{quantityPerItem}</div>
                 )}
                 <h3>{item.nombre}</h3>
+                <img 
+                src={item.imagen} 
+                alt={item.nombre} 
+              width="120"
+                />
                 <p>Precio: ${item.precio}</p>
                 <p>{item.descripcion}</p>
                         
@@ -57,14 +62,14 @@ function ItemList({ items }) {
                     className="item-add-button"
                     onClick={() => addToCart(item.id, item.nombre, item.precio)}
                   >
-                    + Add to cart
+                    + Agregar al carrito
                   </button>
                 ) : (
                   <button
                     className="item-plus-button"
                     onClick={() => addToCart(item.id, item.nombre, item.precio)}
                   >
-                    + add more
+                    + Agregar
                   </button>
                 )}
 
@@ -73,7 +78,7 @@ function ItemList({ items }) {
                     className="item-minus-button"
                     onClick={() => removeFromCart(item.id)}
                   >
-                    subtract item
+                    - Eliminar
                   </button>
                 )}
               </div>

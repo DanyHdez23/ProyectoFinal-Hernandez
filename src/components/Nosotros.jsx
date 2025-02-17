@@ -2,9 +2,9 @@ import React from 'react'
 
 function Nosotros() {
   return (
-    <div>
+    <div className='about-container'>
       <h2> ¿Quiénes somos? </h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium adipisci explicabo sapiente totam exercitationem tempora praesentium, iste nemo laborum. Error provident quo ea repudiandae sit sunt quia minus nihil pariatur.</p>
+      <p>En Doggies Pet Shop, creemos que las mascotas son más que compañeros: son familia. Nos especializamos en ofrecer productos de alta calidad para el bienestar, diversión y cuidado de tu amigo de cuatro patas. Desde juguetes interactivos hasta accesorios y alimentos premium, nuestro objetivo es brindarte todo lo que necesitas para hacer feliz a tu mascota. 🐾💙</p>
     </div>
   )
 }
