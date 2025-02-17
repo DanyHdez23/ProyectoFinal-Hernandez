@@ -3,7 +3,8 @@ import { createRoot } from 'react-dom/client'
 import { initializeApp } from 'firebase/app'
 import './index.css'
 import App from './App.jsx'
-import { ShoppingCartProvider } from './context/ShoppingCartContext.jsx'
+import { getFirestore } from 'firebase/firestore'
+
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -21,6 +22,9 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
+
+
 
 createRoot(document.getElementById('root')).render(
   

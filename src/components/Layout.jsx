@@ -3,18 +3,28 @@ import { Link, Outlet } from 'react-router-dom';
 import { useContext } from 'react';
 import { CartContext } from '../context/ShoppingCartContext';
 import cartIcon from "../../public/cartIcon.png";
+import logo from "../assets/logo.png";
 
 function Layout() {
-  // ✅ Corrección: usar un objeto en lugar de un array
+  
   const { cart } = useContext(CartContext);
 
-  // Calcular la cantidad total de productos en el carrito
+  
   const quantity = cart.reduce((acc, curr) => acc + curr.quantity, 0);
 
   return (
     <div>
       <nav>
         <ul>
+        <li>
+          <Link to={"/"}>
+            <img 
+              src={logo} 
+              alt="Logo" 
+              style={{ width: "80px", height: "auto" }} 
+            />
+          </Link>
+        </li>
           <li>
             <Link to={"/"}>Home</Link>
           </li>
